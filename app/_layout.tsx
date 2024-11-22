@@ -28,8 +28,7 @@ export default function RootLayout() {
         });
 
         responseListener.current = Notifications.addNotificationResponseReceivedListener((lastNotificationResponse) => {
-            const notideepLink = lastNotificationResponse.notification.request.content.data.deeplink;
-            Linking.openURL(notideepLink);
+            console.log(`notification response received: ${JSON.stringify(lastNotificationResponse.notification.request.content)}`)
         });
 
         return () => {
