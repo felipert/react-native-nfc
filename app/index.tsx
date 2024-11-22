@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import NfcManager, {Ndef, NfcTech, NfcEvents, TagEvent} from 'react-native-nfc-manager';
 import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export default function EvChargeReadNfcController() {
+export default function Index() {
     const [hasNfc, setHasNc] = useState<boolean | null>(null);
     const [history, setHistory] = useState<any[]>([]);
 
@@ -61,16 +61,8 @@ const TagScanner: FC<TagScannerProps> = ({onTagFound}) => {
 
             await NfcManager.requestTechnology([
                 NfcTech.Ndef,
-                // NfcTech.NfcB,
-                // NfcTech.NfcF,
-                // NfcTech.NfcV,
-                // NfcTech.IsoDep,
                 NfcTech.MifareClassic,
                 NfcTech.MifareUltralight
-                // NfcTech.MifareIOS,
-                // NfcTech.Iso15693IOS,
-                // NfcTech.FelicaIOS,
-                // NfcTech.NdefFormatable,
             ]);
 
 
