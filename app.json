@@ -1,5 +1,6 @@
 {
   "expo": {
+    "newArchEnabled": true,
     "name": "NfcTest",
     "slug": "NfcTest",
     "version": "1.0.0",
